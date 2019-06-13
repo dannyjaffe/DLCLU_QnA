@@ -1,0 +1,348 @@
+﻿<!-- By Crispy -->
+
+Q(1): If you, a family member or friend, or a client were convicted of a drug offense in a case that started between 2003 and 2013, Annie Dookhan or Sonja Farak may have analyzed the evidence in the case. <br><br> The CPCS Drug Lab Crisis Litigation Unit can find out if Dookhan or Farak worked on the case and provide advice about rights and options. We may be able to vacate the conviction, which would clear it from the criminal record. <br><br> If you would like to learn more, you can submit an inquiry form by answering the following questions.  When you have finished answering, a form will be generated that you can e-mail to our office.  Would you like to continue?
+
+A(): Yes
+	Q(1.1):GOTO:2
+A(): No.
+	Q(1.2): You can always call our Drug Lab Case Hotline at 1-888-999-2881 for more information.  
+
+Q(2): Which of the following best describes you?
+
+A(): I was a defendant in a criminal case.
+	Q(2.1):GOTO:3
+	
+A(): I am a family member or a friend trying to help a defendant.
+	Q(2.2):GOTO:9
+
+A(): I am an attorney making an inquiry on behalf of a client.
+	Q(2.3):GOTO:23
+
+Q(3): Please enter your name.
+X:
+	DOC(3.1):COMMITTEE FOR PUBLIC COUNSEL SERVICES
+DRUG LAB CRISIS LITIGATION UNIT
+
+New Client Inquiry
+
+Name: <x>3</x>
+	Q(3.1): What is your date of birth? (mm/dd/yyyy)
+	X:
+		DOC(3.1.1):Date of Birth: <x>3.1</x>
+		Q(3.1.1): Do you know the docket number of your case?
+		A(): Yes.
+			Q(3.1.1.1): What is the docket number? (If more than one, enter all of them separated by commas).
+			X:
+				DOC(3.1.1.1.1):Docket No.: <x>3.1.1.1</x>
+				Q(3.1.1.1.1):GOTO:4
+		A(): No.
+			Q(3.1.1.2): Do you remember either the courts or the counties where you were prosecuted (e.g., Cambridge District Court or Middlesex County)?  If so, please enter that information below.
+			X:
+				DOC(3.1.1.2.1):Court: <x>3.1.1.2</x>			
+				Q(3.1.1.2.1):GOTO:year
+			A(): No.
+				Q(year): Do you remember the year you were charged? If so, enter it below.
+				X:
+					DOC(3.1.1.2.2.1):Year: <x>year</x>
+					Q(3.1.1.2.2.1):GOTO:4
+				A(): No.
+					Q(3.1.1.2.2.2):GOTO:4
+
+Q(4): Please enter a phone number where you can be reached.
+X:
+	DOC(4.1):Phone Number: <x>4</x>
+	Q(4.1): Please enter your mailing address. (All in one line).
+	X:
+		DOC(4.1.1):Address: <x>4.1</x>
+		Q(4.1.1): Is there any other name that you might be listed under in court records? If so, please enter it below.
+		X:
+			DOC(4.1.1.1):Alias: <x>4.1.1</x>
+			Q(4.1.1.1):GOTO:5
+		A: No.	
+			Q(4.1.1.2):GOTO:5
+	
+Q(5): Was there a codefendant in any of the cases you have listed?  If so, enter their names below:
+X:
+	DOC(5.1):Codefendants: <x>5</x>
+	Q(5.1):GOTO:6
+A(): No.
+	DOC(5.2):Codefendants: None.
+	Q(5.2):GOTO:6	
+A(): I don't know.
+	Q(5.3):GOTO:6	
+
+Q(6): Did you receive a letter from the court stating that you had a drug case involving either Annie Dookhan or Sonja Farak?  If so, please let us know which chemist was involved.
+A(): Annie Dookhan
+	DOC(6.1):Chemist: Annie Dookhan		
+	Q(6.1):GOTO:37
+
+A(): Sonja Farak
+	DOC(6.2):Chemist: Sonja Farak
+	Q(6.2):GOTO:37
+A(): I received letters about both.
+	DOC(6.3):Chemists: Annie Dookhan and Sonja Farak
+	Q(6.3):GOTO:37
+A(): I did not receive a letter.
+	DOC(6.4):Chemist: Unknown
+	Q(6.4):GOTO:37
+Q(7): Do you have a specific question that you would like us to answer? If so, please enter it below.
+X:
+	DOC(7.1):Questions: <x>7</x>
+	Q(7.1): Do we have permission to run your criminal record?
+	A():Yes
+		DOC(7.1.1):Do we have permission to run your criminal record? YES
+		Q(7.1.1):GOTO:8
+	A():No 
+		DOC(7.1.2):Do we have permission to run your criminal record? NO
+		Q(7.1.2):GOTO:8
+A(): No
+	Q(7.2): Do we have permission to run your criminal record?
+	A(): Yes
+		DOC(7.2.1):Do we have permission to run your criminal record? YES
+		Q(7.2.1):GOTO:8
+	A(): No
+		DOC(7.2.2):Do we have permission to run your criminal record? NO
+		Q(7.2.2):GOTO:8
+	
+Q(8): Submit? <br> (This will open your default e-mail service and you can select send. If you have technical difficulties, you can contact our hotline at 1-888-999-2881).
+A[javascript:mail2('druglabunit@publiccounsel.net','New Client Inquiry',doc());]: Yes.
+
+Q(9): Please enter your name.
+X:
+	DOC(9.1):COMMITTEE FOR PUBLIC COUNSEL SERVICES
+DRUG LAB CRISIS LITIGATION UNIT
+
+Family Member/Friend Inquiry
+
+Submitter's Name: <x>9</x>
+	Q(9.1):GOTO:10
+
+Q(10): Please enter the name of the person you are inquiring about.
+X:
+	DOC(10.1):Defendant's Name: <x>10</x>
+	Q(10.1):GOTO:11
+
+Q(11): Please enter that person's date of birth.
+
+X:
+	DOC(11.1):Defendant's D.O.B.: <x>11</x>
+	Q(11.1):GOTO:12
+A(): I do not know.
+	Q(11.2):GOTO:12
+
+Q(12): Do you know the docket number of his or her case?
+A(): Yes
+	Q(12.1):GOTO:13
+A(): No.
+	Q(12.2):GOTO:14
+	
+Q(13): Please enter the docket number of the case.
+X:
+	DOC(13.1):Docket Number: <x>13</x>
+	Q(13.1):GOTO:16
+
+Q(14): Do you know either the courts or the counties where he or she was prosecuted (e.g., Cambridge District Court or Middlesex County)? If so, please enter that information below.
+X:
+	DOC(14.1):Court/County: <x>14</x>
+	Q(14.1):GOTO:15
+A(): No.
+	Q(14.2):GOTO:15
+
+Q(15): Do you know what year he or she was charged? If so, enter it below.
+X:
+	DOC(15.1):Year: <x>15</x>
+	Q(15.1):GOTO:16
+A():No.	
+	Q(15.2):GOTO:16
+
+Q(16): Please enter a phone number where you can be reached.
+X:
+	DOC(16.1):Phone Number: <x>16</x>
+	Q(16.1):GOTO:17
+
+Q(17): Please enter your mailing address.
+X:
+	DOC(17.1):Address: <x>17</x>
+	Q(17.1):GOTO:18
+
+Q(18): Is there any other name that he or she might be listed under in court records? If so, please enter it below.
+X:
+	DOC(18.1):Alias: <x>18</x>
+	Q(18.1):GOTO:19
+A(): No
+	Q(18.2):GOTO:19
+
+Q(19): Was there a codefendant in any of the cases you have listed?  If so, enter their names below.
+X:
+	DOC(19.1):Codefendants: <x>19</x>
+	Q(19.1):GOTO:38
+A(): No.
+	DOC(19.2):Codefendants: None.
+	Q(19.2):GOTO:38
+A(): I am not sure.
+	Q(19.3):GOTO:38
+
+Q(20): Do you have a specific question that you would like us to answer?  If so, please enter it below.
+X:
+	DOC(20.1):Questions: <x>20</x>
+	Q(20.1):GOTO:21
+A(): No.
+	Q(20.2):GOTO:21
+
+Q(21): Is the individual currently incarcerated? If so, please state where.
+X:
+	DOC(21.1):Place of Incarceration: <x>21</x>
+	Q(21.1):GOTO:22
+A(): No. 
+	Q(21.2):GOTO:22
+
+Q(22): Submit? <br> (This will open your default e-mail service and you can select send. If you have technical difficulties, you can contact our hotline at 1-888-999-2881).
+A[javascript:mail2('druglabunit@publiccounsel.net','New Client Inquiry',doc());]: Yes.
+
+Q(23): Please enter your name.
+X:
+	DOC(23.1):COMMITTEE FOR PUBLIC COUNSEL SERVICES
+DRUG LAB CRISIS LITIGATION UNIT
+
+Attorney Referral
+
+Attorney Name: <x>23</x>
+	Q(23.1):GOTO:24
+
+Q(24): Please enter your client's name.
+X:
+	DOC(24.1):Defendant's Name: <x>24</x>
+	Q(24.1):GOTO:25
+
+Q(25): Please enter your client's date of birth. (mm/dd/yyyy)
+X:
+	DOC(25.1):Defendant's D.O.B.: <x>25</x>
+	Q(25.1):GOTO:26
+A(): I do not have that information available.
+	Q(25.2):GOTO:26
+
+Q(26): Please enter the docket number(s).
+X:
+	DOC(26.1):Docket: <x>26</x>
+	Q(26.1):GOTO:29
+A(): I do not have the docket number available. 
+	Q(26.2):GOTO:27
+
+Q(27): Please enter the courts or the counties where your client was prosecuted.
+X:
+	DOC(27.1):Court/County: <x>27</x>
+	Q(27.1):GOTO:28
+A(): I do not have that information available.
+	Q(27.2):GOTO:28
+
+Q(28): Please enter the year your client was arraigned.
+X:
+	DOC(28.1):Year: <x>28</x>
+	Q(28.1):GOTO:29
+A(): I do not have that information available.
+	Q(28.2):GOTO:29
+
+Q(29): Please enter a phone number where you can be reached.
+X:
+	DOC(29.1):Phone number: <x>29</x>
+	Q(29.1):GOTO:30
+
+Q(30): Please enter your mailing address.
+X:
+	DOC(30.1):Attorney Address: <x>30</x>
+	Q(30.1):GOTO:31
+
+Q(31): Is there any other name the client might be listed under in court records (aliases)?
+X:
+	DOC(31.1):Alias: <x>31</x>
+	Q(31.1):GOTO:32
+A(): No.
+	Q(31.2):GOTO:32
+A(): I do not know.
+	Q(31.3):GOTO:32
+
+Q(32): Was there a codefendant in any of the cases that you have listed? If so, please enter their names below.
+X:
+	DOC(32.1):Codefendants: <x>32</x>
+	Q(32.1):GOTO:33
+A(): No.
+	DOC(32.2):Codefendants: None.
+	Q(32.2):GOTO:33
+A(): I do not have that information available. 
+	Q(32.3):GOTO:33
+	
+Q(33): Did your client receive a letter from the court stating that he or she had a drug case involving either Annie Dookhan or Sonja Farak? If so, please let us know which chemist was involved.
+A(): Annie Dookhan
+	DOC(33.1):Chemist: Annie Dookhan
+	Q(33.1):GOTO:39
+A(): Sonja Farak
+	DOC(33.2):Chemist: Sonja Farak
+	Q(33.2):GOTO:39
+A(): The client received letters about both.
+	DOC(33.3):Chemists: Annie Dookhan and Sonja Farak.
+	Q(33.3):GOTO:39
+A(): I do not have that information available.
+	Q(33.4):GOTO:39
+
+Q(34): Do you have a specific question that you would like us to answer? If so, please enter it below.
+X:
+	DOC(34.1):Questions: <x>34</x>
+	Q(34.1):GOTO:35
+A(): No.
+	Q(34.2):GOTO:35
+	
+Q(35): Do we have permission to run the client's criminal record? 
+A(): Yes
+	DOC(35.1):Do we have permission to run the client's criminal record? YES
+	Q(35.1):GOTO:36
+A(): No.
+	DOC(35.2):Do we have permission to run the client's criminal record? NO
+	Q(35.2):GOTO:36
+
+Q(36): Submit? <br> (This will open your default e-mail service and you can select send. If you have technical difficulties, you can contact our hotline at 1-888-999-2881).
+A[javascript:mail2('druglabunit@publiccounsel.net','New Client Inquiry',doc());]: Yes.
+
+Q(37): Do you believe you paid fines and/or fees to the court because of this conviction that you would like to have refunded to you?  Examples of fines and fees you may be entitled to have returned to you include, but are not limited to, probation supervision fees, restitution, victim witness fees, etc.
+A(): Yes.
+	DOC(37.1):Refund: Yes.
+	Q(37.1): Do you live near the courthouse where your case occurred, or would you be able to go to the courthouse in person?
+	A(): Yes.
+		Q(37.1.1): You should go to the clerk’s office at the courthouse where your case occurred and ask the clerks for two things.  First, ask for a copy of the docket from your case, and second, ask for a copy of the Motion for Refund form.  Then, fill out the form to the best of your ability and return it to the clerks.  <br><br>If you have any issues obtaining or completing the form, you can always call our Drug Lab Case Hotline at 1-888-999-2881 for more information.:GOTO:7
+	A(): No.
+		Q(37.1.2): Since you can’t go to the courthouse, you should either call or mail a letter to the clerk’s office at the courthouse where your case occurred.  In your call or letter you should ask the clerks for two things.  First, ask for a copy of the docket from your case, and second, ask for a copy of the Motion for Refund form.  When you receive your docket and the form, fill out the form to the best of your ability and return it to the clerks.  <br><br>If you have any issues obtaining or completing the form, you can always call our Drug Lab Case Hotline at 1-888-999-2881 for more information.:GOTO:7
+A(): No.
+	DOC(37.2):Refunds: No.
+	Q(37.2):GOTO:7	
+A(): I don't know.
+	DOC(37.3):Refunds: Maybe.
+	Q(37.3): You can always call our Drug Lab Case Hotline at 1-888-999-2881 for more information.:GOTO:7
+
+Q(38): Do you believe they paid fines and/or fees to the court because of this conviction that they would like to have refunded to them?  Examples of fines and fees they may be entitled to have returned to them include, but are not limited to, probation supervision fees, restitution, victim witness fees, etc.
+A(): Yes.
+	DOC(38.1):Refund: Yes.
+	Q(38.1): Do they live near the courthouse where their case occurred, or would they be able to go to the courthouse in person?
+	A(): Yes.
+		Q(38.1.1): They should go to the clerk’s office at the courthouse where their case occurred and ask the clerks for two things.  First, ask for a copy of the docket from their case, and second, ask for a copy of the Motion for Refund form.  Then, they must fill out the form to the best of their ability and return it to the clerks.  <br><br>If they have any issues obtaining or completing the form, they can always call our Drug Lab Case Hotline at 1-888-999-2881 for more information.:GOTO:20
+	A(): No.
+		Q(38.1.2): Since they can’t go to the courthouse, they should either call or mail a letter to the clerk’s office at the courthouse where their case occurred.  In their call or letter they should ask the clerks for two things.  First, ask for a copy of the docket from their case, and second, ask for a copy of the Motion for Refund form.  When they receive their docket and the form, they must fill out the form to the best of their ability and return it to the clerks.  <br><br>If they have any issues obtaining or completing the form, they can always call our Drug Lab Case Hotline at 1-888-999-2881 for more information.:GOTO:20
+A(): No.
+	DOC(38.2):Refunds: No.
+	Q(38.2):GOTO:20
+A(): I don't know.
+	DOC(38.3):Refunds: Maybe.
+	Q(38.3): They can always call our Drug Lab Case Hotline at 1-888-999-2881 for more information.:GOTO:20
+Q(39): Does your client believe they paid fines and/or fees to the court because of this conviction that they would like to have refunded to them?  Examples of fines and fees they may be entitled to have returned to them include, but are not limited to, probation supervision fees, restitution, victim witness fees, etc.
+A(): Yes.
+	DOC(39.1):Refund: Yes.
+	Q(39.1): Do they live near the courthouse where their case occurred, or would they be able to go to the courthouse in person?
+	A(): Yes.
+		Q(39.1.1): They should go to the clerk’s office at the courthouse where their case occurred and ask the clerks for two things.  First, ask for a copy of the docket from their case, and second, ask for a copy of the Motion for Refund form.  Then, they must fill out the form to the best of their ability and return it to the clerks.  <br><br>If they have any issues obtaining or completing the form, they can always call our Drug Lab Case Hotline at 1-888-999-2881 for more information.:GOTO:34
+	A(): No.
+		Q(39.1.2): Since they can’t go to the courthouse, they should either call or mail a letter to the clerk’s office at the courthouse where their case occurred.  In their call or letter they should ask the clerks for two things.  First, ask for a copy of the docket from their case, and second, ask for a copy of the Motion for Refund form.  When they receive their docket and the form, they must fill out the form to the best of their ability and return it to the clerks.  <br><br>If they have any issues obtaining or completing the form, they can always call our Drug Lab Case Hotline at 1-888-999-2881 for more information.:GOTO:34
+A(): No.
+	DOC(39.2):Refunds: No.
+	Q(39.2):GOTO:34
+A(): I don't know.
+	DOC(39.3):Refunds: Maybe.
+	Q(39.3): They can always call our Drug Lab Case Hotline at 1-888-999-2881 for more information.:GOTO:34
+
